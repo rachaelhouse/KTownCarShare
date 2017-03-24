@@ -1,5 +1,8 @@
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">;
+</head>
+
 <?php
-echo '<link rel="stylesheet" type="text/css" href="style.css">';
 echo "Available Parking Lots" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
 ?>
 
