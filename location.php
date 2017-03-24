@@ -1,7 +1,8 @@
+
+<?php
 <style>
 include('style.css');
 </style>
-<?php
 echo "Available Parking Lots" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
 ?>
 
