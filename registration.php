@@ -35,7 +35,7 @@ if (empty($_SESSION)){
 			</div>
 			<br>
 			<div class="col-lg-12" align="left">
-			Email: <Input class="form-control" Type="TEXT" NAME="Email" placeholder="123@ktcs.com" size="20"/>
+			Email: <Input class="form-control" Type="TEXT" NAME="Email" placeholder="emailme@gmail.com" size="20"/>
 			</div>
 			<br>
 			<div class="col-lg-12" align="left">
