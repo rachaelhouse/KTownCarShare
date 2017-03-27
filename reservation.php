@@ -82,9 +82,8 @@ body {
 <div class="container">
 
 <table cellspacing="50" align="center">
-	<tr><td align="center"><Form METHOD="POST" ACTION="reservation.php"><input type="submit" class="btn btn-primary" name="rentalhistory" value="Show My Rental History"></Form></td></tr> 
-	<tr><td align="center"><a href='./'><button class='btn btn-primay' >Make Reservation</button></a></td></tr> 
-	<tr><td><br/><br/></td></tr>
+	<tr><td align="center"><Form METHOD="POST" ACTION="rentalHistory.php"><input type="submit" class="btn btn-primary" name="rentalhistory" value="Show My Rental History"></Form></td></tr> 
+	<tr><td align="center"><Form METHOD="POST" ACTION="createReservation.php"><input type="submit" class="btn btn-primary" name="createReservation" value="Create new Reservation"></Form></td></tr> 
 	<tr><td align="center"><p><b>Search Your Reservation</b></p></td></tr>
 	<tr>
 		<td align="center">

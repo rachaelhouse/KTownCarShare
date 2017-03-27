@@ -2,12 +2,12 @@
 include_once('connect.php');
 
 if(isset($_POST['VIN'])){
-$member_ID=$_SESSION['member_ID'];
+$member_ID = $_Post['memID'];
 $VIN=$_POST['VIN'];
 $date=date("Y-m-d H:i:s");
-$locationID=$_POST['locationID'];
-$pick_up_time=$_POST['starttime'];
-$return_time=$_POST['endtime']; 
+$locationID=$_POST['location'];
+$pick_up_time=$_POST['STime'];
+$return_time=$_POST['ETime']; 
 
 $Start = date('Y-m-d H:i:s',$pick_up_time);
 $End = date('Y-m-d H:i:s',$return_time);
