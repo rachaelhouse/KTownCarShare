@@ -1,15 +1,18 @@
+
+
 <?php
+// used to connect to the database
+$host = "localhost";
+$db_name = "KTownCarShare";
+$username = "cisc332";
+$password = "cisc332password";
 
-ob_start();
-
-//session
-session_start();
-require_once __DIR__ . '/libs/config.php';
-
-//connect to database
-$cxn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD,DB_DATABASE);
-if (mysqli_connect_errno())
-{echo "Failed to connect to MySQL: " . mysqli_connect_error();
-die();
+try {
+    $cxn = new mysqli($host,$username,$password, $db_name);
+}
+ 
+// show error
+catch(Exception $exception){
+    echo "Connection error: " . $exception->getMessage();
 }
 ?>

@@ -14,14 +14,14 @@ $End = date('Y-m-d H:i:s',$return_time);
 
 if(mysqli_query($cxn,"INSERT INTO reservation values (UUID_SHORT(),'$member_ID','$VIN','$date','$locationID','$Start','','active','$End','')")){
 echo "<h1 align='center'> The Booking was successful! You will be redirected to the home page in 5 sec...</h1>";
-header('Refresh: 5; URL=index.php');
+header('Refresh: 5; URL=localhost/KTownCarShare');
 }else{
 	echo "<h1 align='center'> The Booking was NOT successful. You will be redirected to the booking page in 5sec...</h1>";
-	header('Refresh: 5; URL=location.php');
+	header('Refresh: 5; URL=localhost/KTownCarShare');
 }
 }else{
 	echo "<h1 align='center'> The Booking was NOT successful. You will be redirected to the booking page in 5sec...</h1>";
-	header('Refresh: 5; URL=localhost/member/location.php');
+	header('Refresh: 5; URL=localhost/KTownCarShare');
 }
 
 ?>
