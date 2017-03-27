@@ -2,7 +2,6 @@
 include_once('./includes/header.class.php');
 ?>
 
-
 <!-- Header and Nav -->
 <?php
 	require('./includes/nav.class.php');

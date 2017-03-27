@@ -1,4 +1,8 @@
 <?php
+include_once('./includes/header.class.php');
+?>
+
+<?php
   require('./includes/nav.class.php');
 ?>
 
