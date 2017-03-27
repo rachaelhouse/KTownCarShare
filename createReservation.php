@@ -20,7 +20,7 @@ include_once('./includes/header.class.php');
 
 			<FORM METHOD="POST" ACTION="makeReservation.php">
 			<div class="col-lg-12" align="left">
-			MemberID:<INPUT CLASS="form-control" TYPE="TEXT" NAME = "MemberID" placeholder="MemberID" size="20"/>
+			MemberID:<INPUT CLASS="form-control" TYPE="TEXT" NAME = "MemID" placeholder="MemberID" size="20"/>
 			</div>
 			<br />
 			<div class="col-lg-12" align="left">
@@ -36,11 +36,7 @@ include_once('./includes/header.class.php');
 			</div>
 			<br>
 			<div class="col-lg-12" align="left">
-			Start:<Input class="form-control" Type="TEXT" NAME="STime" placeholder="Start Time" size="20"/>
-			</div>
-			<br>
-			<div class="col-lg-12" align="left">
-			End:<Input class="form-control" Type="TEXT" NAME="ETime" placeholder="End Time" size="20"/>
+			Length:<Input class="form-control" Type="TEXT" NAME="Length" placeholder="Length of Rental" size="20"/>
 			</div>
 			<br>
 			<div>

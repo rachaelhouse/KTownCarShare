@@ -20,6 +20,3 @@
 <?php
 
 ?>
-</div>
-  </div><!-- End Container -->
-</nav>
