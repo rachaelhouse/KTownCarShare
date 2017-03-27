@@ -11,14 +11,14 @@ include_once('./includes/header.class.php');
 <style>
 h1 {
   text-align: center;
-  font: bold 100px arial, sans-serif;
-  color: orange;
+  font: bold 75px arial, sans-serif;
+  color: #618e9b;
 }
 </style>
 </head>
 
 <?php
-echo "<h1>Available Parking Lots</h1>" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
+echo "<h1>Available Parking Spaces</h1>" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
 ?>
 
 <?php
