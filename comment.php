@@ -48,8 +48,12 @@ include_once('./includes/header.class.php');
 <?php
 
 include_once('connect.php');
+    $MemberID = $_POST["MemberID"];
+    $VIN = $_POST["VIN"];
+    $COMMENT = $_POST["COMMENT"];
+    $Rating = $_POST["Rating"];
 
-mysqli_query($cxn, "INSERT INTO COMMENT VALUES('MemberID', 'VIN', 'Rating', 'Comment')");
+mysqli_query($cxn, "INSERT INTO COMMENT VALUES('$MemberID', '$VIN', '$Rating', '$COMMENT')");
 
 ?>
 <?php
