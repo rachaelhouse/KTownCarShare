@@ -1,5 +1,12 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+h1 {
+  text-align: center;
+  font: bold 15px arial, sans-serif;
+  color: orange;
+}
+</style>
 </head>
 
 <?php
