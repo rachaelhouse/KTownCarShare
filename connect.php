@@ -5,10 +5,10 @@
 $host = "localhost";
 $db_name = "KTownCarShare";
 $username = "cisc332";
-$password = "cisc332password";
+$password1 = "cisc332password";
 
 try {
-    $cxn = new mysqli($host,$username,$password, $db_name);
+    $cxn = new mysqli($host,$username,$password1, $db_name);
 }
  
 // show error

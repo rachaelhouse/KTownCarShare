@@ -15,7 +15,7 @@ $Password=$_POST["password"];
 
 $memID = rand(10000000, 99999999);
 $memFee = rand(0, 250);
-mysqli_query($cxn, "INSERT INTO Member VALUES('$memID','$Name', '$Address', '$Phone','$Email', '$License', '$memFee', '$password')");
+mysqli_query($cxn, "INSERT INTO Member VALUES('$memID','$Name', '$Address', '$Phone','$Email', '$License', '$memFee', '$Password')");
 
 $HOME='./index.php';
     echo "Successfully Register!<br/>";
