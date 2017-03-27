@@ -3,7 +3,7 @@
 <style>
 h1 {
   text-align: center;
-  font: bold 15px arial, sans-serif;
+  font: bold 100px arial, sans-serif;
   color: orange;
 }
 </style>
