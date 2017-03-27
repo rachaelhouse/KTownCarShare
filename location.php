@@ -1,3 +1,7 @@
+<?php
+  require('./includes/nav.class.php');
+?>
+
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
@@ -12,7 +16,6 @@ h1 {
 <?php
 echo "<h1>Available Parking Lots</h1>" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
 ?>
-
 
 <?php
     include_once('connect.php');
