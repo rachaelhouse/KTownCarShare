@@ -13,6 +13,7 @@
         <li class=""><a href="./location.php" class="navbar-item" style="">Location</a></li>
         <li class=""><a href="./comment.php" class="navbar-item" style="">Comments</a></li>
          <li class=""><a href="./login.php" class="navbar-item" style="">Login</a></li>
+         <li class=""><a href="./cars.php" class="navbar-item" style="">Available Cars</a></li>
       </ul>
 
     </div><!-- End Nav Bar-->
