@@ -51,10 +51,6 @@ include_once('./includes/header.class.php');
 
 <?php
 
-include_once('connect.php');
-
-mysqli_query($cxn, "INSERT INTO COMMENT VALUES('MemberID', 'VIN', 'Rating', 'Comment')");
-
 ?>
 <?php
 	include_once('./includes/footer.class.php');
