@@ -2,7 +2,7 @@
   <div class="container-fluid">
         <!-- Logo Images -->
         <a class="navbar-brand" href="./index.php">
-            
+            <img src="./assets/images/rach.png?" style="height:500%;">
         </a> 
 
     <!-- Nav Bar -->  
