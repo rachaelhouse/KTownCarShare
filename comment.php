@@ -48,13 +48,18 @@ include_once('./includes/header.class.php');
 <?php
 
 include_once('connect.php');
+if (empty($_POST["Name"])||empty($_POST["Address"])||empty($_POST["Phone"])||empty($_POST["Email"])||empty($_POST["License"])||empty($_POST["password"])){
+    echo "<p>Please fill in all the information!</p>";
+    $link_address='./comment.php';
+    echo "<a href='$link_address'>Go Back!</a>";
+}
+else{
     $MemberID = $_POST["MemberID"];
     $VIN = $_POST["VIN"];
     $COMMENT = $_POST["COMMENT"];
     $Rating = $_POST["Rating"];
-
 mysqli_query($cxn, "INSERT INTO COMMENT VALUES('$MemberID', '$VIN', '$Rating', '$COMMENT')");
-
+}
 ?>
 <?php
 	include_once('./includes/footer.class.php');
