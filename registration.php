@@ -59,10 +59,6 @@ if (empty($_SESSION)){
 	</tr>
 </table>
 </div>
-<?php
-	include_once('./includes/footer.class.php');
-?>
-
 </body>
 
 <?php
@@ -70,3 +66,8 @@ if (empty($_SESSION)){
 	echo "<h2 align='center'>You have already logged in</h2>";
 	echo "<h2 align='center'>Please Log out first to register another account</h2>";
 }
+?>
+
+<?php
+	include_once('./includes/footer.class.php');
+?>

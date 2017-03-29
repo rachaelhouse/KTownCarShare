@@ -15,14 +15,18 @@ include_once('./includes/header.class.php');
 <style>
 h1 {
   text-align: center;
-  font: bold 75px arial, sans-serif;
-  color: #618e9b;
+  font: bold 30px arial, sans-serif;
+  text-decoration: underline;
+}
+h2{
+  text-align: center;
+  font: 20px arial;
 }
 </style>
 </head>
 
 <?php
-echo "<h1>Available Parking Spaces</h1>" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
+echo "<h1>Available Parking Spaces:</h1>" //RHYS YOU WILL NEED TO FORMATE THIS PAGE
 ?>
 
 <?php
@@ -48,7 +52,12 @@ echo "<h1>Available Parking Spaces</h1>" //RHYS YOU WILL NEED TO FORMATE THIS PA
 <?php
     $locations= mysqli_query($cxn, "SELECT Address, NumSpaces FROM Parking ");
     while($row = mysqli_fetch_assoc($locations)){
-        echo $row['Address'], "   ", $row['NumSpaces'];
+        echo "<h2>", $row['Address'], "   ", $row['NumSpaces'], "</h2><br><br><br>";
      }
                
 ?>
+
+<?php
+  include_once('./includes/footer.class.php');
+?>
+
