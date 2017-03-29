@@ -17,7 +17,7 @@ include_once('./includes/header.class.php');
 <style>
 h1 {
   text-align: center;
-  font: bold 25px arial, sans-serif;
+  font: bold 30px arial, sans-serif;
 }
 h2{
   text-align: center;
@@ -32,13 +32,13 @@ include_once('connect.php');
 $date= ($_POST['DATE']);
 
 
-echo "Cars Available on ", $date, "<br>";
+echo "<h1>Cars Available on ", $date, "</h2><br>";
 
 $unCars = (mysqli_query($cxn,"SELECT VIN FROM Reservation WHERE RDate = $date"));
 $cars = (mysqli_query($cxn,"SELECT * FROM Car "));
 if (mysqli_num_rows($cars) > 0) {
 while ($row = mysqli_fetch_assoc($cars)){
-	echo "<h1><br>VIN: ", $row['VIN'], "\tMake: ", $row['Make'], "\tModel: ", $row['Model'], "\tYear: ", $row['Year'] ,"\tLocation: ", $row['Location'], "\tFee: ", $row['Fee'], "<br></h1>";
+	echo "<h2><br>VIN: ", $row['VIN'], "\tMake: ", $row['Make'], "\tModel: ", $row['Model'], "\tYear: ", $row['Year'] ,"\tLocation: ", $row['Location'], "\tFee: ", $row['Fee'], "<br></h2>";
 
 
 }
