@@ -21,7 +21,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
    {
     //log in
     $login = mysqli_query($cxn,"SELECT * FROM member WHERE email='$email'");
-    if (mysqli_num_rows($login)===0)
+    if ($login == False)
        $error=1;
     else
     {
