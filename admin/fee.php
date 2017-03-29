@@ -20,11 +20,11 @@ include_once('./includes/header.class.php');
 
       <FORM METHOD="POST" ACTION="calculatefee.php">
       <div class="col-lg-12" align="left">
-      MemberID:<Input class="form-control" Type="DATE" NAME="MemberID" placeholder="MemberID" size="20"/>
+      MemberID:<INPUT CLASS="form-control" TYPE="TEXT" NAME = "MemberID" placeholder="MemberID" size="20"/>
       </div>
       <br />
       <div>
-      <button type="submit" class="btn btn-primary">Submit Date</button>
+      <button type="submit" class="btn btn-primary">Submit MemberID</button>
       </div>
 
       </FORM>
