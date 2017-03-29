@@ -84,30 +84,7 @@ body {
 <table cellspacing="50" align="center">
 	<tr><td align="center"><Form METHOD="POST" ACTION="rentalHistory.php"><input type="submit" class="btn btn-primary" name="rentalhistory" value="Show My Rental History"></Form></td></tr> 
 	<tr><td align="center"><Form METHOD="POST" ACTION="createReservation.php"><input type="submit" class="btn btn-primary" name="createReservation" value="Create new Reservation"></Form></td></tr> 
-	<tr><td align="center"><p><b>Search Your Reservation</b></p></td></tr>
-	<tr>
-		<td align="center">
-			<br />
-
-
-			<FORM METHOD="POST" ACTION="reservation.php">
-			<div class="col-lg-12">
-			<INPUT CLASS="form-control" TYPE="TEXT" NAME = "reservID" placeholder="reservation ID" size="30"/>
-			</div>
-			<br />
-			<div>
-			<p style="color:gray">OR</p>
-			</div>
-			<div class="col-lg-12">
-			<INPUT CLASS="form-control" TYPE="TEXT" NAME = "memberID" placeholder="Member ID" size="30"/>
-			</div>
-			<!-- <INPUT TYPE="submit" VALUE="Search"> -->
-			<br/><br/>
-			<div>
-			<button type="submit" class="btn btn-primary">Search</button>
-			</div>
-			<INPUT type="hidden" name="firstentryidentifier" value="1"/>
-
+	
 			</FORM>
 		</td>
 	</tr>
@@ -180,5 +157,5 @@ if(!empty(mysqli_num_rows($reservations))){
 
 <?php
 }
-//include_once('./includes/footer.class.php');
+include_once('./includes/footer.class.php');
 ?>

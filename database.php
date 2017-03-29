@@ -27,6 +27,7 @@
    mysqli_query($cxn,"drop table MemberHistory;");
    mysqli_query($cxn,"drop table Comment;");
    mysqli_query($cxn,"drop table Reservation;");
+      mysqli_query($cxn,"drop table Admin;");
 
    echo "Tables dropped.<br />";
 
@@ -101,7 +102,6 @@
 
     mysqli_query($cxn,"create table Reservation
       (RNo INTEGER not null,
-      ###RCode INTEGER,
       RDate DATE,
       Length INTEGER,
       MemID INTEGER,
@@ -110,6 +110,14 @@
       );");
 
     echo "Reservation created <br />";
+
+     mysqli_query($cxn,"create table Admin
+      (email Char(50) not null,
+      password Char(50) not null, 
+      primary key(email)
+      );");
+
+    echo "Admin created <br />";
 
     mysqli_query($cxn,"insert into Parking values 
       ('North Lot', '34');");
@@ -143,6 +151,11 @@
       ('10017155', '554783', '4', 'Nice reliable car.'),
       ('10018232', '468538', '2', 'Big blind spot.'),
       ('10011026', '539030', '3', 'Very Fast!');");
+
+      mysqli_query($cxn,"insert into Admin values 
+      ('sarah@ktcs.ca', 'password'),
+      ('bill@ktcs.ca', 'password'),
+      ('rhys@ktcs.ca', 'password';");
 
     mysqli_close($cxn); 
 echo "KTownCarShare database created.";
