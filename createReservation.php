@@ -32,7 +32,7 @@ include_once('./includes/header.class.php');
 			</div>
 			<br />
 			<div class="col-lg-12" align="left">
-			Date:<Input class="form-control" Type="DATE" NAME="DATE" placeholder="Y-m-d " size="20"/>
+			Date:<Input class="form-control" Type="TEXT" NAME="DATE" placeholder="Y-m-d " size="20"/>
 			</div>
 			<br />
 			<div class="col-lg-12" align="left">

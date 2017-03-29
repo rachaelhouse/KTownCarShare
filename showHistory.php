@@ -5,8 +5,8 @@
 <?php
 include_once('connect.php');
 
-if(isset($_POST['MemID'])){
-$member_ID = $_POST['MemID'];
+if(isset($_SESSION['member_ID'])){
+$member_ID = $_SESSION['member_ID'];
 echo "Your Reservations  ";
 $result = (mysqli_query($cxn,"SELECT RNo, RDate,Length, VIN FROM Reservation where MemID = $member_ID"));
 if (mysqli_num_rows($result) > 0) {
