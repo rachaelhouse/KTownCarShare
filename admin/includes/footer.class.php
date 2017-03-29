@@ -13,8 +13,7 @@ hr {
 <footer>
 <div class="footer">
 <hr align="center">
-  <p align="center"><i>Posted by: Frank Jiang & Jenne Zhang</i></p>
-  <p align="center"><i>Contact information: <a href="mailto:frank.jiang@queensu.ca">frank.jiang@queensu.ca </a> and <a href="mailto:12jnz@queensu.ca">12jnz@queensu.ca </a>.</i></p>
+  <p align="center"><i>KTownCarShare -Brought to you be RRR
 </div>
 </footer>
 </body>
