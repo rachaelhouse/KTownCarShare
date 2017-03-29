@@ -17,7 +17,7 @@ include_once('./includes/header.class.php');
 
 </div>
 <div align="center">
-<img src="cars.jpg" width="957" height="497" alt=""/> </div>
+<img src="cars.png" width="957" height="497" alt=""/> </div>
 <br/><br/><br/><br/>
 <?php
 	include_once('./includes/footer.class.php');
