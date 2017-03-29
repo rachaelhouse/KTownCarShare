@@ -17,7 +17,7 @@ include_once('./includes/header.class.php');
 	if(!empty($_SESSION['username'])){
 		$member_ID=$_SESSION['member_ID'];
 		$result=mysqli_query($cxn,"SELECT * From Member,Reservation where Reservation.member_ID='$member_ID' AND status='in_use'");
-		if (mysqli_num_rows($result)===0){
+		if ($result == False){
 			echo "<h3 align='center'>It seems you have no outstanding vehicle In Use</h3>";
 		}else{
 			if (empty($_POST['millage'])){
