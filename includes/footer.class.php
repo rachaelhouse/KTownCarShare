@@ -13,7 +13,7 @@ hr {
 <footer>
 <div class="footer">
 <hr align="center">
-  <p align="center"><i>Thank you for choosing our site</i></p>
+  <p align="center"><i>Copyright &#169; RRR</i></p>
 </div>
 </footer>
 </body>
