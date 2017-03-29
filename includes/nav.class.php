@@ -2,11 +2,7 @@
   <div class="container-fluid">
         <!-- Logo Images -->
         <a class="navbar-brand" href="./index.php">
-<<<<<<< HEAD
             <img src="./assets/images/homebtn.png?" style="height:500%;">
-=======
-            <img src="./assets/images/house.png?" style="height:500%;">
->>>>>>> origin/master
         </a> 
 
     <!-- Nav Bar -->  
