@@ -152,10 +152,10 @@
       ('10018232', '468538', '2', 'Big blind spot.'),
       ('10011026', '539030', '3', 'Very Fast!');");
 
-      mysqli_query($cxn,"insert into Admin values 
-      ('sarah@ktcs.ca', 'password'),
-      ('bill@ktcs.ca', 'password'),
-      ('rhys@ktcs.ca', 'password';");
+      ##mysqli_query($cxn,"insert into Admin values 
+      #('sarah@ktcs.ca', 'password'),
+      #('bill@ktcs.ca', 'password'),
+      #('rhys@ktcs.ca', 'password';");
 
     mysqli_close($cxn); 
 echo "KTownCarShare database created.";

@@ -7,8 +7,7 @@
 
     <!-- Nav Bar -->  
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class=""><a href="./registration.php" class="navbar-item" style="">Registration</a></li>  
+      <ul class="nav navbar-nav navbar-right"> 
         <li class=""><a href="./location.php" class="navbar-item" style="">Location</a></li>
         <li class=""><a href="./CarIndex.php" class="navbar-item" style="">Car</a></li>
         <li class=""><a href="./reservation.php" class="navbar-item" style="">Reservation</a></li>  

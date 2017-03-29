@@ -33,7 +33,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
           $error=2;
        else
        {
-          $_SESSION['email']=$login_row['Email'];
+          $_SESSION['email']=$login_row['email'];
           }
        }
   
@@ -42,7 +42,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
     }
   }
 }
-echo "<a href='gotoAdmin.php'>Go to Admin</a>";
+
 if (isset($_SESSION['email']))
   {
     
