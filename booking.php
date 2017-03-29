@@ -1,4 +1,7 @@
-
+<?php
+  //Create a user session or resume an existing one
+ session_start();
+ ?>
 
 <style type="text/css">
 .wrap {
