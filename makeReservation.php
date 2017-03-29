@@ -8,7 +8,7 @@ include_once('connect.php');
 if(isset($_POST['VIN'])){
 $member_ID = $_POST['MemID'];
 $VIN=$_POST['VIN'];
-$date=$_POST("date");
+$date= $_POST["DATE"];
 $locationID=$_POST['Location'];
 $length=$_POST['Length'];
 

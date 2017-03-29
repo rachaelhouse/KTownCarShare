@@ -5,7 +5,9 @@
 <?php
 include_once('connect.php');
 
-$date=date("Y-m-d");
+
+$date= ($_POST['DATE']);
+
 
 echo "Cars Available on ", $date, "<br>";
 

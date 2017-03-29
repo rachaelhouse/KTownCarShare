@@ -3,7 +3,7 @@ include_once('connect.php');
 
 $date=date("Y-m-d");
 
-echo "Cars Available on ", $date, "<br>";
+echo "Fee for member", $date, "<br>";
 
 $unCars = (mysqli_query($cxn,"SELECT VIN FROM Reservation WHERE RDate = $date"));
 $cars = (mysqli_query($cxn,"SELECT * FROM Car "));
