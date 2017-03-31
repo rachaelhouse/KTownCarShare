@@ -34,14 +34,23 @@ $date= ($_POST['DATE']);
 
 echo "<h1>Cars Available on ", $date, "</h2><br>";
 
-$unCars = (mysqli_query($cxn,"SELECT VIN FROM Reservation WHERE RDate = $date"));
+
 $cars = (mysqli_query($cxn,"SELECT * FROM Car "));
 if (mysqli_num_rows($cars) > 0) {
 while ($row = mysqli_fetch_assoc($cars)){
-	echo "<h2><br>VIN: ", $row['VIN'], "\tMake: ", $row['Make'], "\tModel: ", $row['Model'], "\tYear: ", $row['Year'] ,"\tLocation: ", $row['Location'], "\tFee: ", $row['Fee'], "<br></h2>";
+  $unCars = (mysqli_query($cxn,"SELECT VIN,RDate,Length FROM Reservation"));
+  while($unavailCar = mysqli_fetch_assoc($unCars)){
+    $resStartDate = strtotime($unavailCar['RDate']);
+    $Length = $unavailCar['Length'];
+    $resEndDate = strtotime("+$Length days", $resStartDate);
+    if ($unavailCar['VIN'] !== $row['VIN'] or strtotime($date) < $resStartDate or strtotime($date) > $resEndDate){
+echo "<h2><br>VIN: ", $row['VIN'], ",\tMake: ", $row['Make'], ",\tModel: ", $row['Model'], ",\tYear: ", $row['Year'] ,",\tLocation: ", $row['Location'], ",\tFee: ", $row['Fee'], "<br></h2>";
+    }
+  }
+  }
+	
 
 
-}
 }
 
 ?>
