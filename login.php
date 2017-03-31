@@ -1,7 +1,3 @@
-<?php
-  //Create a user session or resume an existing one
- session_start();
- ?>
  
 <?php
 

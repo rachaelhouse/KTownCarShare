@@ -1,8 +1,11 @@
 <?php
+if(!(isset($_SESSION['email']))){
   //Create a user session or resume an existing one
  session_start();
- ?>
- 
+}
+?>
+
+
 <?php
 include_once('./includes/header.class.php');
 ?>

@@ -1,9 +1,4 @@
- <?php
-  //Create a user session or resume an existing one
- if (!(isset($_SESSION['email']))){
- session_start();
-}
- ?>
+
 
 <?php
 
