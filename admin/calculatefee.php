@@ -13,11 +13,22 @@ else{
 
 
 echo "Fee for member   ", $MemberID, "<br>";
-$row = mysqli_fetch_assoc($fee)
+$rowfee= mysqli_fetch_assoc($fee);
 	
-mFee = $row['memFee']
+$mFee = $rowfee['memFee'];
 
-resFee
+echo $mFee;
+
+$resFee = 0;
+
+$resFeerows = (mysqli_query($cxn,"SELECT resFee FROM Reservation WHERE MemID = $MemberID"));
+
+while ($row = mysqli_fetch_assoc($resFeerows))
+{
+	$resFee = $resFee + $row['resFee']
+}
+
+echo $resFee;
 
 }
 

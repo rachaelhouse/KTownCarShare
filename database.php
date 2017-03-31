@@ -106,6 +106,7 @@
       Length INTEGER,
       MemID INTEGER,
       VIN INTEGER,
+      resFee INTEGER,
       primary key(RNo)
       );");
 
@@ -123,9 +124,9 @@
       ('North Lot', '34');");
 
       mysqli_query($cxn,"insert into Reservation values
-      ('0124', '223', '24/05/17', '4'),
-      ('0125', '649', '26/05/17', '2'),
-      ('0126', '115', '20/05/17', '14');");
+      ('0124', '223', '24/05/17', '4', '30'),
+      ('0125', '649', '26/05/17', '2', '20'),
+      ('0126', '115', '20/05/17', '14', '23');");
 
       mysqli_query($cxn,"insert into Member values 
       ('10017155', 'John Gold',   '12 Windy Road',    '(613)-123-2324', 'gold@rogers.com',      'A2B 5K8L', '150', 'password'),
