@@ -1,31 +1,30 @@
 <?php
+  //Create a user session or resume an existing one
+ session_start();
+ ?>
+ 
+<?php
 include_once('./includes/header.class.php');
 ?>
 
-
 <!-- Header and Nav -->
 <?php
-	include_once('./includes/nav.class.php');
+	require('./includes/nav.class.php');
 ?>
 
 <div class="container">
 
 <table cellspacing="50" align="center">
-	<tr><td align="center" style="font-size:260%"><p><b>Welcome to K-Town Car Share <u>Admin Page</u></b></p></td></tr>
-
+	<tr><td align="center" style="font-size:300%"><p><b>Welcome to K-Town Car Share</b></p></td></tr>
+	<tr><td align="center" style="font-size:100%"><p><b>Brought to you by</b></p></td></tr>
+	<tr><td align="center" style="font-size:300%"><p><b>RRR</b></p></td></tr>
 </table>
-</div>
 
+</div>
 <div align="center">
-  <p><br/>
-    <br/><br/>
-  <img src="./images.jpeg" alt="" width="754" height="301" />
-  </p>
-<br/>
-<br/>
-<br/>
-</div>
-
+<img src="cars.png" width="957" height="497" alt=""/> </div>
+<br/><br/><br/><br/>
 <?php
 	include_once('./includes/footer.class.php');
 ?>
+
