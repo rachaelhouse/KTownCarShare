@@ -20,23 +20,9 @@ include_once('./includes/header.class.php');
 	<tr><td align="center" style="font-size:300%"><p><b>RRR</b></p></td></tr>
 </table>
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<div align="center">
-  <p><br/>
-    <br/><br/>
-  <img src="./cars.png" alt="" width="877" height="407" />
-  </p>
-<br/>
-<br/>
-<br/>
-=======
->>>>>>> origin/master
->>>>>>> Stashed changes
 </div>
 <div align="center">
-<img src="cars.png" width="957" height="497" alt=""/> </div>
+<img src="cars.png" width="877" height="407" alt=""/> </div>
 <br/><br/><br/><br/>
 <?php
 	include_once('./includes/footer.class.php');
