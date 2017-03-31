@@ -21,11 +21,17 @@ echo "Your Reservations  ";
 $result = (mysqli_query($cxn,"SELECT RNo, RDate,Length, VIN FROM Reservation where MemID = $member_ID"));
 if (mysqli_num_rows($result) > 0) {
 while ($row = mysqli_fetch_assoc($result)){
-	echo "Reservation Number: ", $row['RNo'], " Reservation Date: ", $row['RDate'], " Length of Rental: ", $row['Length'], " VIN: ", $row['VIN'];
+	echo "<h2 align = 'center'><br>Reservation Number: ", $row['RNo'], " Reservation Date: ", $row['RDate'], " Length of Rental: ", $row['Length'], " VIN: ", $row['VIN'];
 
 }
 }
+else{
+	echo "<h1 align='center'> No Reservations to show ";
+}
 
+}
+else{
+	echo "<h1 align='center'> You must be logged in to show rental history";
 }
 ?>
 <br/><br/><br/><br/>
