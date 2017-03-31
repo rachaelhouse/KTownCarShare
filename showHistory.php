@@ -2,6 +2,16 @@
   //Create a user session or resume an existing one
  session_start();
  ?>
+
+<?php
+include_once('./includes/header.class.php');
+?>
+
+<!-- Header and Nav -->
+<?php
+	require('./includes/nav.class.php');
+?>
+
 <?php
 include_once('connect.php');
 
@@ -17,4 +27,8 @@ while ($row = mysqli_fetch_assoc($result)){
 }
 
 }
+?>
+<br/><br/><br/><br/>
+<?php
+	include_once('./includes/footer.class.php');
 ?>
