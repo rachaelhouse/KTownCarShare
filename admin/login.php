@@ -1,3 +1,8 @@
+ <?php
+  //Create a user session or resume an existing one
+ session_start();
+ ?>
+
 <?php
 
 include_once'connect.php';
@@ -15,7 +20,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
    {
     //log in
     $login = mysqli_query($cxn,"SELECT * FROM admin WHERE email='$email'");
-    if (mysqli_num_rows($login)===0)
+    if ($login == False)
        $error=1;
     else
     {

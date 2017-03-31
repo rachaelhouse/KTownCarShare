@@ -13,7 +13,7 @@ hr {
 <footer>
 <div class="footer">
 <hr align="center">
-  <p align="center"><i>KTownCarShare -Brought to you be RRR
+  <p align="center"><i>Copyright &#169; RRR</i></p>
 </div>
 </footer>
 </body>
