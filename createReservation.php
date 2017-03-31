@@ -23,10 +23,7 @@ include_once('./includes/header.class.php');
 
 
 			<FORM METHOD="POST" ACTION="makeReservation.php">
-			<div class="col-lg-12" align="left">
-			MemberID:<INPUT CLASS="form-control" TYPE="TEXT" NAME = "MemID" placeholder="MemberID" size="20"/>
-			</div>
-			<br />
+		
 			<div class="col-lg-12" align="left">
 			VIN:<Input class="form-control" Type="TEXT" NAME="VIN" placeholder="VIN" size="20"/>
 			</div>

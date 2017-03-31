@@ -5,8 +5,10 @@
 <?php
 include_once('connect.php');
 
+if (isset($_SESSION['member_ID'])){
+	$member_ID = $_SESSION['member_ID'];
+
 if(isset($_POST['VIN'])){
-$member_ID = $_POST['MemID'];
 $VIN=$_POST['VIN'];
 $date= $_POST["DATE"];
 $locationID=$_POST['Location'];
@@ -27,7 +29,10 @@ header('Refresh: 5; URL=index.php');
 	header('Refresh: 5; URL=createReservation.php');
 
 }
-
+}else{
+echo "<h1 align='center'> You must be logged in to make a reservation. Redirecting to Home page in 5 seconds ";
+	header('Refresh: 5; URL=index.php');
+}
 
 ?>
 
