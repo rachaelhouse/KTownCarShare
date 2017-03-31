@@ -35,7 +35,7 @@ if (empty($_SESSION)){
 			</div>
 			<br>
 			<div class="col-lg-12" align="left">
-			Phone: <Input class="form-control" Type="TEXT" NAME="Phone" placeholder="(123)456-7890" size="20"/>
+			Phone: <Input class="form-control" Type="TEXT" NAME="Phone" placeholder="(123)-456-7890" size="20"/>
 			</div>
 			<br>
 			<div class="col-lg-12" align="left">
@@ -47,7 +47,7 @@ if (empty($_SESSION)){
 			</div>
 
 			<div class="col-lg-12" align="left">
-			Password: <Input class="form-control" Type="TEXT" NAME="password" size="20"/>
+			Password: <Input class="form-control" Type="PASSWORD" NAME="password" placeholder="Password" size="20"/>
 			</div>
 			<br>
 			<div>
