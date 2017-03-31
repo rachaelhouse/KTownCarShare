@@ -24,10 +24,6 @@ include_once('./includes/header.class.php');
 
 			<FORM METHOD="POST" ACTION="comment.php">
 			<div class="col-lg-12" align="left">
-			MemberID:<INPUT CLASS="form-control" TYPE="TEXT" NAME = "MemberID" placeholder="MemberID" size="20"/>
-			</div>
-			<br />
-			<div class="col-lg-12" align="left">
 			VIN:<Input class="form-control" Type="TEXT" NAME="VIN" placeholder="VIN" size="20"/>
 			</div>
 			<br />
@@ -52,18 +48,28 @@ include_once('./includes/header.class.php');
 <?php
 
 include_once('connect.php');
-if (empty($_POST["Name"])||empty($_POST["Address"])||empty($_POST["Phone"])||empty($_POST["Email"])||empty($_POST["License"])||empty($_POST["password"])){
-    echo "<p>Please fill in all the information!</p>";
-    $link_address='./comment.php';
-    echo "<a href='$link_address'>Go Back!</a>";
-}
-else{
-    $MemberID = $_POST["MemberID"];
+if (isset($_SESSION['member_ID'])){
+if (isset($_POST['VIN']) && isset($_POST['COMMENT']) && isset($_POST['Rating'])){
+	$MemberID = $_SESSION["member_ID"];
     $VIN = $_POST["VIN"];
     $COMMENT = $_POST["COMMENT"];
     $Rating = $_POST["Rating"];
-mysqli_query($cxn, "INSERT INTO COMMENT VALUES('$MemberID', '$VIN', '$Rating', '$COMMENT')");
+
+if(mysqli_query($cxn, "INSERT INTO COMMENT VALUES('$MemberID', '$VIN', '$Rating', '$COMMENT')")){
+    echo "<h1 align='center'> You successfully made a comment. Redirecting to Home page in 5 seconds ";
+	header('Refresh: 5; URL=index.php');
 }
+else{
+	echo "<p>Please fill in all the information!</p>";
+    $link_address='./comment.php';
+    echo "<a href='$link_address'>Go Back!</a>";
+}
+}
+}
+else{
+	echo "<h1 align='center'> You must be logged in to leave a comment. ";
+}
+
 ?>
 <?php
 	include_once('./includes/footer.class.php');
