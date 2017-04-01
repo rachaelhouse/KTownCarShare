@@ -9,7 +9,7 @@
     <!-- Nav Bar -->  
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right"> 
-        <li class=""><a href="./location.php" class="navbar-item" style="background-color: #dcdfe1;">Location</a></li>
+        <li class=""><a href="./carsatlocation.php" class="navbar-item" style="background-color: #dcdfe1;">Cars at Location</a></li>
         <li class=""><a href="./addcar.php" class="navbar-item" style="background-color: #dcdfe1;">Add Car</a></li>
         <li class=""><a href="./reservation.php" class="navbar-item" style="background-color: #dcdfe1;">Reservation</a></li>  
         <li class=""><a href="./fee.php" class="navbar-item" style="background-color: #dcdfe1;">Fee</a></li>
