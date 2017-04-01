@@ -22,7 +22,7 @@ include_once('./includes/header.class.php');
 			<br />
 
 
-			<FORM METHOD="POST" ACTION="makeReservation.php">
+			<FORM METHOD="POST" ACTION="createReservation.php">
 		
 			<div class="col-lg-12" align="left">
 			VIN:<Input class="form-control" Type="TEXT" NAME="VIN" placeholder="VIN" size="20"/>
@@ -49,8 +49,32 @@ include_once('./includes/header.class.php');
 	</tr>
 </table>
 </div>
-
 <?php
+
+include_once('connect.php');
+if (isset($_SESSION['member_ID'])){
+if (isset($_POST['VIN'])){
+	$MemberID = $_SESSION["member_ID"];
+    $VIN = $_POST["VIN"];
+    $Date= $_POST["DATE"];
+	$LocationID=$_POST['Location'];
+	$Length=$_POST['Length'];
+	$Rno = rand(1111,9999);
+	$Fee = rand(10, 100);
+
+if(mysqli_query($cxn, "INSERT INTO Reservation VALUES('$Rno', '$Date', '$Length', '$MemberID', '$VIN', '$Fee')")){
+    echo "<h1 align='center'> You successfully made a Reservation. Redirecting to Home page in 5 seconds ";
+	header('Refresh: 5; URL=index.php');
+}
+else{
+	echo "<p>Please fill in all the information!</p>";
+    
+}
+}
+}
+else{
+	echo "<h1 align='center'> You must be logged in to create a reservation ";
+}
 
 ?>
 <?php
@@ -58,3 +82,6 @@ include_once('./includes/header.class.php');
 ?>
 
 </body>
+
+
+
