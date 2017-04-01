@@ -44,10 +44,6 @@ include_once('./includes/header.class.php');
             Location:<Input class="form-control" Type="TEXT" NAME="Location" placeholder="Location" size="20"/>
             </div>
             <br>
-            <div class="col-lg-12" align="left">
-            Fee:<Input class="form-control" Type="TEXT" NAME="Fee" placeholder="Rental Fee" size="20"/>
-            </div>
-            <br>
             <div>
             <button type="submit" class="btn btn-primary">Submit Car Details</button>
             </div>

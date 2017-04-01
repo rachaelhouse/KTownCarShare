@@ -13,13 +13,13 @@ $VIN=$_POST['VIN'];
 $Make= $_POST["Make"];
 $Model= $_POST["Model"];
 $Year= $_POST["Year"];
-$location=$_POST['Location'];
-$Fee=$_POST['Fee'];
-
-echo $Make; 
+$Location=$_POST['Location'];
 
 
-if(mysqli_query($cxn,"INSERT INTO Car values ('$VIN', '$Make', $Model, '$Year','$Location' , '$Fee')")){
+
+
+
+if(mysqli_query($cxn,"INSERT INTO Car VALUES ('$VIN', '$Make', '$Model', '$Year','$Location' , '0')")){
 echo "<h1 align='center'> The car was successfully added! Redirecting to homepage in 5 seconds";
 header('Refresh: 5; URL=index.php');
 
