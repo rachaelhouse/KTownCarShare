@@ -1,4 +1,11 @@
 <?php
+include_once('./includes/header.class.php');
+?>
+
+
+<?php
+  require('./includes/nav.class.php');
+
 include_once('connect.php');
 
 $MemberID= $_POST['MemberID'];
@@ -17,7 +24,7 @@ $rowfee= mysqli_fetch_assoc($fee);
 	
 $mFee = $rowfee['memFee'];
 
-echo $mFee;
+echo "Monthly Fee:" , $mFee,  "<br>";
 
 $resFee = 0;
 
@@ -25,13 +32,23 @@ $resFeerows = (mysqli_query($cxn,"SELECT resFee FROM Reservation WHERE MemID = $
 
 while ($row = mysqli_fetch_assoc($resFeerows))
 {
-	$resFee = $resFee + $row['resFee']
+	$resFee = $resFee + $row['resFee'];
 }
 
-echo $resFee;
+echo "Rental Fee(s): " , $resFee, "<br>";
+
+$total = $resFee + $mFee;
+
+echo "Total Free: ", $total, "<br>";
+
+echo "Email sent, with monthly invoice!";
 
 }
 
 
 
+?>
+
+<?php
+  include_once('./includes/footer.class.php');
 ?>
