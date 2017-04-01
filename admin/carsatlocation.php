@@ -22,7 +22,7 @@ include_once('./includes/header.class.php');
             <br />
 
 
-            <FORM METHOD="POST" ACTION="showcarsatL.php">
+            <FORM METHOD="POST" ACTION="carsatlocation.php">
         
             <div class="col-lg-12" align="left">
             Location:<Input class="form-control" Type="TEXT" NAME="Location" placeholder="Location" size="20"/>
@@ -39,6 +39,23 @@ include_once('./includes/header.class.php');
 </div>
 
 <?php
+
+include_once('connect.php');
+
+if (isset($_POST['Location'])){
+    $Location = $_POST["Location"];
+   
+ echo "<h2 align = 'center'><br>Cars at ", $Location, "<br>";
+$result = (mysqli_query($cxn,"SELECT VIN FROM Car WHERE Location = '$Location'")); 
+while ($row = mysqli_fetch_assoc($result)){
+    echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'];
+}
+}
+else{
+
+    echo "<h2 align = 'center'><br>Please enter location";
+}
+
 
 ?>
 <?php
