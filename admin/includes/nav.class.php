@@ -14,6 +14,7 @@
         <li class=""><a href="./reservation.php" class="navbar-item" style="background-color: #dcdfe1;">Reservation</a></li>  
         <li class=""><a href="./fee.php" class="navbar-item" style="background-color: #dcdfe1;">Fee</a></li>
         <li class=""><a href="./feedback.php" class="navbar-item" style="background-color: #dcdfe1;">Feed Back</a></li>
+        <li class=""><a href="./carRentalHistory.php" class="navbar-item" style="background-color: #dcdfe1;">Car Rental History</a></li>
         <li class=""><a href="index.php" class="navbar-item" style="background-color: #dcdfe1;">Home</a></li>
       </ul>
     </div><!-- End Nav Bar-->

@@ -50,6 +50,7 @@ $result = (mysqli_query($cxn,"SELECT VIN FROM Car WHERE Location = '$Location'")
 while ($row = mysqli_fetch_assoc($result)){
     echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'];
 }
+
 }
 else{
 
