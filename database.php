@@ -27,7 +27,10 @@
    mysqli_query($cxn,"drop table MemberHistory;");
    mysqli_query($cxn,"drop table Comment;");
    mysqli_query($cxn,"drop table Reservation;");
-      mysqli_query($cxn,"drop table Admin;");
+   mysqli_query($cxn,"drop table Admin;");
+   mysqli_query($cxn,"drop table DeptLocations;");
+   mysqli_query($cxn,"drop table Works_On;");
+   mysqli_query($cxn,"drop table PLocation;");
 
    echo "Tables dropped.<br />";
 
@@ -46,6 +49,7 @@
       Year INTEGER,
       Location CHAR(50) not null,
       Fee INTEGER not null,
+      RentalNo INTEGER, 
       primary key(VIN)
       );");
 
@@ -85,6 +89,7 @@
       Status CHAR(50),
       PickGas CHAR(50),
       DropGas CHAR(50),
+      Date DATE,
       primary key(MemID, RNo, VIN)
       );");
 
@@ -134,9 +139,9 @@
       ('10011026', 'Jenny Pipes', '42 Apple Avenue',  '(613)-443-4753', 'jenpipes@hotmail.com', '2FAST4U',  '150', 'password');");
 
       mysqli_query($cxn,"insert into Car values 
-      ('554783', 'Ford',  'Escort', '2010', 'North Lot', '40'),
-      ('468538', 'Chevy', 'Civic',  '2006', 'North Lot', '30'),
-      ('539030', 'Ford',  'Camaro', '2013', 'North Lot', '50');");
+      ('554783', 'Ford',  'Escort', '2010', 'North Lot', '40', '1'),
+      ('468538', 'Chevy', 'Civic',  '2006', 'North Lot', '30', '10'),
+      ('539030', 'Ford',  'Camaro', '2013', 'North Lot', '50', '3');");
 
       mysqli_query($cxn,"insert into MaintenanceHistory values 
       ('554783', '18/02/17', '0763489', 'Body Work'),
@@ -144,19 +149,19 @@
       ('539030', '28/01/17', '0089281', 'Repair');");
 
       mysqli_query($cxn,"insert into History values 
-      ('10017155', '0124', '554783', '0836432', '0836585', 'Normal',      'Full', 'Half'),
-      ('10018232', '0125', '468538', '1003509', '1004235', 'Damaged',     'Full', 'Full'),
-      ('10011026', '0126', '539030', '0458273', '1000091', 'Not Running', 'Full', 'Empty');");
+      ('10017155', '0124', '554783', '0836432', '0836585', 'Normal',      'Full', 'Half', '24/05/17'),
+      ('10018232', '0125', '468538', '1003509', '1004235', 'Damaged',     'Full', 'Full', '22/07/17'),
+      ('10011026', '0126', '539030', '0458273', '1000091', 'Not Running', 'Full', 'Empty', '30/05/17');");
 
       mysqli_query($cxn,"insert into Comment values 
       ('10017155', '554783', '4', 'Nice reliable car.'),
       ('10018232', '468538', '2', 'Big blind spot.'),
       ('10011026', '539030', '3', 'Very Fast!');");
 
-      ##mysqli_query($cxn,"insert into Admin values 
-      #('sarah@ktcs.ca', 'password'),
-      #('bill@ktcs.ca', 'password'),
-      #('rhys@ktcs.ca', 'password';");
+      mysqli_query($cxn,"insert into Admin values 
+      ('sarah@ktcs.ca', 'password'),
+      ('bill@ktcs.ca', 'password'),
+      ('rhys@ktcs.ca', 'password');");
 
     mysqli_close($cxn); 
 echo "KTownCarShare database created.";

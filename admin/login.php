@@ -16,7 +16,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
    else
    {
     //log in
-    $login = mysqli_query($cxn,"SELECT * FROM admin WHERE email='$email'");
+    $login = mysqli_query($cxn,"SELECT email, password FROM Admin WHERE email='$email'");
     if ($login == False)
        $error=1;
     else
@@ -48,7 +48,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
 if (isset($_SESSION['email']))
   {
     
-   echo "<div>Hi, ".$_SESSION['email']." You are logged in. <a href='logout.php'>(Log out)</a> &nbsp; <a href='return.php'>return car</a></div>";
+   echo "<div>Hi, ".$_SESSION['email']." You are logged in. <a href='logout.php'>(Log out)</a> &nbsp;";
   }
   else
   {
@@ -62,7 +62,7 @@ if (isset($_SESSION['email']))
    <input style='display=inline' type='submit' value='Log in'></p>
    </form>
    ";
-    echo "<p style='color:red'>Enter a Email and a Password</p>";
+    echo "<p style='color:red'>Enter an Email and a Password</p>";
 }
 
 
