@@ -11,12 +11,13 @@
       <ul class="nav navbar-nav navbar-right"> 
         <li class=""><a href="./carsatlocation.php" class="navbar-item" style="background-color: #dcdfe1;">Cars at Location</a></li>
         <li class=""><a href="./addcar.php" class="navbar-item" style="background-color: #dcdfe1;">Add Car</a></li>
-        <li class=""><a href="./reservationonDate.php" class="navbar-item" style="background-color: #dcdfe1;">Reservation On Date</a></li>  
+        <li class=""><a href="./reservationonDate.php" class="navbar-item" style="background-color: #dcdfe1;">Reservations By Date</a></li>  
         <li class=""><a href="./fee.php" class="navbar-item" style="background-color: #dcdfe1;">Fee</a></li>
         <li class=""><a href="./feedback.php" class="navbar-item" style="background-color: #dcdfe1;">Feed Back</a></li>
         <li class=""><a href="./carRentalHistory.php" class="navbar-item" style="background-color: #dcdfe1;">Car Rental History</a></li>
         <li class=""><a href="./damaged.php" class="navbar-item" style="background-color: #dcdfe1;">Damaged Cars</a></li>
         <li class=""><a href="./highLowRental.php" class="navbar-item" style="background-color: #dcdfe1;">Highest/ Lowest Rentals</a></li>
+        <li class=""><a href="./5000+.php" class="navbar-item" style="background-color: #dcdfe1;">5000+</a></li>
        
       </ul>
     </div><!-- End Nav Bar-->

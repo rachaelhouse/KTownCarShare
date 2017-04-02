@@ -14,11 +14,11 @@ include_once('./includes/header.class.php');
 
 <?php
 
-echo "<h2 align = 'center'><br>Comments Needing Feed Back";
+echo "<h2 align = 'center'><br>Cars Traveled 5000+ Km's Since Last Maintence";
 
-$result = (mysqli_query($cxn,"SELECT Comment, MemID, VIN, Rating FROM Comment"));
+$result = (mysqli_query($cxn,"SELECT VIN FROM History WHERE (DropOdReading - PickOdReading > '5000')"));
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h2 align = 'center'><br>Member: ", $row['MemID'],"<br> VIN: ", $row['VIN'],"<br> Comment: ", $row['Comment'],"<br> Rating: ", $row['Rating'], "<br>";
+	echo "<h2 align = 'center'><br>VIN: ", $row['VIN'], "<br>";
 
 	
 }
