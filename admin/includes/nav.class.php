@@ -13,7 +13,7 @@
         <li class=""><a href="./addcar.php" class="navbar-item" style="background-color: #dcdfe1;">Add Car</a></li>
         <li class=""><a href="./reservationonDate.php" class="navbar-item" style="background-color: #dcdfe1;">Reservations By Date</a></li>  
         <li class=""><a href="./fee.php" class="navbar-item" style="background-color: #dcdfe1;">Fee</a></li>
-        <li class=""><a href="./feedback.php" class="navbar-item" style="background-color: #dcdfe1;">Feed Back</a></li>
+        <li class=""><a href="./feedback.php" class="navbar-item" style="background-color: #dcdfe1;">Feedback</a></li>
         <li class=""><a href="./carRentalHistory.php" class="navbar-item" style="background-color: #dcdfe1;">Car Rental History</a></li>
         <li class=""><a href="./damaged.php" class="navbar-item" style="background-color: #dcdfe1;">Damaged Cars</a></li>
         <li class=""><a href="./highLowRental.php" class="navbar-item" style="background-color: #dcdfe1;">Highest/ Lowest Rentals</a></li>

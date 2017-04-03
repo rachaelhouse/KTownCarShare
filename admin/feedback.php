@@ -13,20 +13,20 @@ include_once('./includes/header.class.php');
 ?>
 
 <?php
-
-echo "<h2 align = 'center'><br>Comments Needing Feed Back";
+echo "<h1 align = 'center'><br>Comments Needing Feedback";
 
 $result = (mysqli_query($cxn,"SELECT Comment, MemID, VIN, Rating FROM Comment"));
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h2 align = 'center'><br>Member: ", $row['MemID'],"<br> VIN: ", $row['VIN'],"<br> Comment: ", $row['Comment'],"<br> Rating: ", $row['Rating'], "<br>";
-
-	
+	echo "<h4 align = 'center'><br>Member: ", $row['MemID'],"<br> VIN: ", $row['VIN'],"<br> Comment: ", $row['Comment'],"<br> Rating: ", $row['Rating'], "<br>";	
+	echo "<form action='feedbackPage.php'>";
+	echo "<textarea name='comment' rows='7' cols='50'> </textarea>";
+	echo "<input type='submit' value='Submit'>";
+	echo "</form>";
 }
-
 ?>
 
 <?php
 	include_once('./includes/footer.class.php');
 ?>
 
-</body>
+
