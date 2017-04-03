@@ -1,7 +1,4 @@
-<?php
-  //Create a user session or resume an existing one
- session_start();
- ?>
+
 <?php
 include_once('./includes/header.class.php');
 ?>
@@ -12,7 +9,7 @@ include_once('./includes/header.class.php');
 	require('./includes/nav.class.php');
 ?>
 <?php
-if (empty($_SESSION)){
+
 ?>
 <div class="container">
 
@@ -62,10 +59,7 @@ if (empty($_SESSION)){
 </body>
 
 <?php
-}else{
-	echo "<h2 align='center'>You have already logged in</h2>";
-	echo "<h2 align='center'>Please Log out first to register another account</h2>";
-}
+
 ?>
 
 <?php
