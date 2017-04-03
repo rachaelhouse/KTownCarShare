@@ -53,7 +53,7 @@ while ($row = mysqli_fetch_assoc($result)){
 }
 }
 else{
-	echo "<p>Please fill in the VIN for the car's history you would like to view!</p>";
+	echo "<p>Please enter a valid VIN!! </p>";
 
 }
 
