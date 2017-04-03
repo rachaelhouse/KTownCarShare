@@ -1,5 +1,3 @@
-
-
 <?php
 
 include_once'connect.php';
@@ -47,7 +45,6 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
 
 if (isset($_SESSION['email']))
   {
-    
    echo "<div>Hi, ".$_SESSION['email']." You are logged in. <a href='logout.php'>(Log out)</a> &nbsp;";
   }
   else

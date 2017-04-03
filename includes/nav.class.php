@@ -13,7 +13,6 @@
         <li class=""><a href="./reservation.php" class="navbar-item" style="background-color: #dcdfe1;">Reservation</a></li>      
         <li class=""><a href="./location.php" class="navbar-item" style="background-color: #dcdfe1;">Location</a></li>
         <li class=""><a href="./comment.php" class="navbar-item" style="background-color: #dcdfe1;">Comments</a></li>
-        
          <li class=""><a href="./cars.php" class="navbar-item" style="background-color: #dcdfe1;">Available Cars</a></li>
          <li class=""><a href="./admin/index.php" class="navbar-item" style="background-color: #dcdfe1;">Go To Admin</a></li>
       </ul>

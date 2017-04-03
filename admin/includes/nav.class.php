@@ -18,6 +18,7 @@
         <li class=""><a href="./damaged.php" class="navbar-item" style="background-color: #dcdfe1;">Damaged Cars</a></li>
         <li class=""><a href="./highLowRental.php" class="navbar-item" style="background-color: #dcdfe1;">Highest/ Lowest Rentals</a></li>
         <li class=""><a href="./5000+.php" class="navbar-item" style="background-color: #dcdfe1;">5000+</a></li>
+        <li class=""><a href="/KTownCarShare/index.php" class="navbar-item" style="background-color: #dcdfe1;">Not An Admin</a></li>
        
       </ul>
     </div><!-- End Nav Bar-->
