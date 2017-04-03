@@ -45,7 +45,6 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
     }
   }
 }
-echo "<a href='gotoAdmin.php'>Go to Admin</a>";
 if (isset($_SESSION['username']))
   {
     
