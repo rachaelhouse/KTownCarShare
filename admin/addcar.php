@@ -22,7 +22,7 @@ include_once('./includes/header.class.php');
             <br />
 
 
-            <FORM METHOD="POST" ACTION="submitcar.php">
+            <FORM METHOD="POST" ACTION="addcar.php">
         
             <div class="col-lg-12" align="left">
             VIN:<Input class="form-control" Type="TEXT" NAME="VIN" placeholder="VIN" size="20"/>
@@ -56,8 +56,32 @@ include_once('./includes/header.class.php');
 
 <?php
 
+include_once('connect.php');
+
+if (isset($_POST['VIN'])){
+    $VIN=$_POST['VIN'];
+    $Make= $_POST['Make'];
+    $Model= $_POST['Model'];
+    $Year= $_POST['Year'];
+    $Location=$_POST['Location'];
+    $numRentals = rand(0,20);
+}
+
+else{
+
+    echo "<h2 align = 'center'>Please Enter Car Info";
+}
+
+if(mysqli_query($cxn,"INSERT INTO Car VALUES ('$VIN', '$Make', '$Model', '$Year','$Location' , '20', '$numRentals' )")){
+
+    echo "<h2 align = 'center'>You have sucessfully added a new car!";
+}
+else{
+    echo "<h2 align = 'center'>Add Car Failed";
+}
 ?>
 <?php
+    echo "<h5><br><br>";
     include_once('./includes/footer.class.php');
 ?>
 

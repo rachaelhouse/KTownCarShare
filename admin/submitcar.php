@@ -8,12 +8,12 @@ include_once('connect.php');
 if (isset($_SESSION['member_ID'])){
 	$member_ID = $_SESSION['member_ID'];
 
-if(isset($_POST['VIN'])){
-$VIN=$_POST['VIN'];
-$Make= $_POST["Make"];
-$Model= $_POST["Model"];
-$Year= $_POST["Year"];
-$Location=$_POST['Location'];
+	if(isset($_POST['VIN'])){
+		$VIN=$_POST['VIN'];
+		$Make= $_POST["Make"];
+		$Model= $_POST["Model"];
+		$Year= $_POST["Year"];
+		$Location=$_POST['Location'];
 
 
 

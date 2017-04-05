@@ -36,8 +36,7 @@ $_SESSION['member_ID']=$memID;
 $_SESSION['email']=$Email;
 
 $HOME='./index.php';
-    echo "Successfully Register!<br/>";
-    echo "<a href='$HOME'>HOME</a>";
+    echo "<h1 align='center'>Successfully Registered!<br/>";
 }
 ?>
 <br/><br/>

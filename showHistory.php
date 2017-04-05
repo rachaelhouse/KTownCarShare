@@ -21,7 +21,7 @@ echo "<h1 align= 'center'>Your Reservations: <br>";
 $result = (mysqli_query($cxn,"SELECT RNo, RDate,Length, VIN FROM Reservation where MemID = '$member_ID'"));
 if (mysqli_num_rows($result) > 0) {
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h3 align = 'center'><br><b>Reservation Number: </b>", $row['RNo'], " <br><b>Reservation Date: </b>", $row['RDate'], " <br><b>Length of Rental: </b>", $row['Length'], " <br><b>VIN: </b>", $row['VIN'],"<br><br>";
+	echo "<h3 align = 'center'><br><b>Reservation Number: </b>", $row['RNo'], " <br><b>Reservation Date: </b>", $row['RDate'], " <br><b>Length of Rental: </b>", $row['Length'], " <br><b>VIN: </b>", $row['VIN'],"<br>";
 
 }
 }
