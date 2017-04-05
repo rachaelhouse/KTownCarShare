@@ -60,6 +60,7 @@ else{
 
 ?>
 <?php
+    echo "<h5><br>";
     include_once('./includes/footer.class.php');
 ?>
 

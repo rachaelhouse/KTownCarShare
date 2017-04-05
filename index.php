@@ -5,7 +5,6 @@ if(!(isset($_SESSION['email']))){
 }
 ?>
 
-
 <?php
 include_once('./includes/header.class.php');
 ?>
@@ -30,4 +29,3 @@ include_once('./includes/header.class.php');
 <?php
 	include_once('./includes/footer.class.php');
 ?>
-

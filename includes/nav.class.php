@@ -3,7 +3,7 @@
   <div class="container-fluid">
         <!-- Logo Images -->
         <a class="navbar-brand" href="./index.php">
-            <img src="./assets/images/homebtn.png?" style="height:500%;">
+            <img src="./assets/images/homebtn.png?" style="height:430%;">
         </a> 
 
     <!-- Nav Bar -->  

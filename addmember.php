@@ -3,12 +3,22 @@
   //Create a user session or resume an existing one
  session_start();
  ?>
+
+ <?php
+include_once('./includes/header.class.php');
+?>
+
+<!-- Header and Nav -->
+<?php
+	require('./includes/nav.class.php');
+?>
+
 <?php
 include_once'connect.php';
 if (empty($_POST["Name"])||empty($_POST["Address"])||empty($_POST["Phone"])||empty($_POST["Email"])||empty($_POST["License"])||empty($_POST["password"])){
-    echo "<p>Please fill in all the information!</p>";
+    echo "<h1 align ='center'>Please fill in all the information!</h1>";
     $link_address='./registration.php';
-    echo "<a href='$link_address'>Go Back!</a>";
+    echo "<h3 align ='center'><a href='$link_address'>Go Back</a>";
 }
 else{
 $Name=$_POST["Name"];
@@ -29,5 +39,10 @@ $HOME='./index.php';
     echo "Successfully Register!<br/>";
     echo "<a href='$HOME'>HOME</a>";
 }
+?>
+<br/><br/>
+<?php
+	echo "<h5><br><br>";
+	include_once('./includes/footer.class.php');
 ?>
 

@@ -6,11 +6,11 @@
 include_once('./includes/header.class.php');
 ?>
 
-
 <?php
     require('./includes/nav.class.php');
     include_once('connect.php');
     ?>
+
 <div class="container">
 
 <table cellspacing="50" align="center">
@@ -54,12 +54,13 @@ while ($row = mysqli_fetch_assoc($result)){
 }
 else{
 
-    echo "<h2 align = 'center'><br>Please enter a date";
+    echo "<h2 align = 'center'>Please enter a date";
 }
 
 
 ?>
 <?php
+    echo "<h5><br><br>";
     include_once('./includes/footer.class.php');
 ?>
 

@@ -22,11 +22,11 @@ while ($row = mysqli_fetch_assoc($result)){
 	echo "<input type='submit' name='id' value='Submit'>";
 	error_reporting(E_ALL ^ E_NOTICE);
 	$VIN1 = $_GET[$row['VIN']];
-	$sql = "DELETE FROM 'Comment' where 'VIN' = $VIN1";
+	$sql = "DELETE FROM 'Comment' WHERE 'VIN' = $VIN1";
 	if(isset($_POST['id']))
 	{
 		$VIN1 = $_GET['VIN'];
- 		$sql = "DELETE FROM 'Comment' where 'VIN' = $VIN1"; 
+ 		$sql = "DELETE FROM 'Comment' WHERE 'VIN' = $VIN1"; 
  		echo"hi";
 	}
 	echo "</form>";
@@ -35,7 +35,6 @@ while ($row = mysqli_fetch_assoc($result)){
 ?>
 
 <?php
+	echo "<h5><br>";
 	include_once('./includes/footer.class.php');
 ?>
-
-
