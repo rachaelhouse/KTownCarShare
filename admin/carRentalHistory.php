@@ -44,22 +44,23 @@ if (isset($_POST['VIN'])){
     $VIN = $_POST["VIN"];
    
 
-echo "<h2 align = 'center'><br>Rental History for Car:  ", $VIN;
+echo "<h3 align = 'center'><br><b>Rental History for Car:  </b>", $VIN;
 $result = (mysqli_query($cxn,"SELECT memID, RNo, Status,PickOdReading, DropOdReading FROM History where VIN = '$VIN'"));
 if (mysqli_num_rows($result) > 0) {
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h2 align = 'center'><br>Reservation Number: ", $row['RNo'],"<br> MemberID: ", $row['memID'], "<br> Status: ", $row['Status'], "<br>Pickup Odometer Reading: ", $row['PickOdReading'],"<br>Drop off Odometer Reading: ", $row['DropOdReading'],'<br>';
+	echo "<h4 align = 'center'><br>Reservation Number: ", $row['RNo'],"<br> MemberID: ", $row['memID'], "<br> Status: ", $row['Status'], "<br>Pickup Odometer Reading: ", $row['PickOdReading'],"<br>Drop off Odometer Reading: ", $row['DropOdReading'],'<br>';
 
 }
 }
 else{
-	echo "<p>Please enter a valid VIN!! </p>";
+	echo "<h1 align = 'center'>Please enter a valid VIN!!";
 
 }
 
 }
 ?>
 <?php
+	echo "<h5><br>";
 	include_once('./includes/footer.class.php');
 ?>
 

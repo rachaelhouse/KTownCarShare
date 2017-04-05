@@ -14,11 +14,11 @@ include_once('./includes/header.class.php');
 
 <?php
 
-echo "<h2 align = 'center'><br>Cars Traveled 5000+ Km's Since Last Maintence";
+echo "<h1 align = 'center'><br><b>Cars Traveled 5000+ Km's Since Last Maintence:</b>";
 
 $result = (mysqli_query($cxn,"SELECT VIN FROM History WHERE (DropOdReading - PickOdReading > '5000')"));
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h2 align = 'center'><br>VIN: ", $row['VIN'], "<br>";
+	echo "<h3 align = 'center'><br><b>VIN: </b>", $row['VIN'], "<br>";
 
 	
 }
@@ -26,6 +26,7 @@ while ($row = mysqli_fetch_assoc($result)){
 ?>
 
 <?php
+	echo "<h5><br>";
 	include_once('./includes/footer.class.php');
 ?>
 

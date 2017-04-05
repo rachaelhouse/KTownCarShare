@@ -14,16 +14,17 @@ include_once('./includes/header.class.php');
 
 <?php
 
-echo "<h2 align = 'center'><br>Highest/Lowest Car Rentals";
+echo "<h1 align = 'center'><br><b>Highest/Lowest Car Rentals</b>";
 
 $result = (mysqli_query($cxn,"SELECT VIN, RentalNo FROM Car ORDER BY RentalNo"));
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h2 align = 'center'><br>VIN: ", $row['VIN'],"<br> Number of Rentals: ", $row['RentalNo'];
+	echo "<h4 align = 'center'><br><b>VIN: </b>", $row['VIN'],"<br><b> Number of Rentals: </b>", $row['RentalNo'];
 }
 
 ?>
 
 <?php
+	echo "<h5><br><br>";
 	include_once('./includes/footer.class.php');
 ?>
 
