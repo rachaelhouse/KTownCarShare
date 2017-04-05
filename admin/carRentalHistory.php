@@ -55,7 +55,7 @@ echo "<h3 align = 'center'><br><b>Rental History for Car:  </b>", $VIN;
 $result = (mysqli_query($cxn,"SELECT memID, RNo, Status,PickOdReading, DropOdReading FROM History where VIN = '$VIN'"));
 if (mysqli_num_rows($result) > 0) {
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h4 align = 'center' class='padding'><br><b>Reservation Number: </b>", $row['RNo'],"<br><b> MemberID: </b>", $row['memID'], "<br><b> Status: </b>", $row['Status'], "<br><b>Pickup Odometer Reading: </b>", $row['PickOdReading'],"<br><b>Drop off Odometer Reading: </b>", $row['DropOdReading'],'<br>';
+	echo "<h4 class='padding'><br><b>Reservation Number: </b>", $row['RNo'],"<br><b> MemberID: </b>", $row['memID'], "<br><b> Status: </b>", $row['Status'], "<br><b>Pickup Odometer Reading: </b>", $row['PickOdReading'],"<br><b>Drop off Odometer Reading: </b>", $row['DropOdReading'],'<br>';
 
 }
 }
