@@ -25,8 +25,8 @@
       <div class="widget" align="right">
 <?php
 include('./login.php');
-echo "<br>";
 ?>
+<br><br>
 </div>
   </div><!-- End Container -->
 </nav>
