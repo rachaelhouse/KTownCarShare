@@ -17,11 +17,11 @@ include_once('connect.php');
 
 if(isset($_SESSION['member_ID'])){
 $member_ID = $_SESSION['member_ID'];
-echo "Your Reservations  ";
+echo "<h1 align= 'center'>Your Reservations: <br>";
 $result = (mysqli_query($cxn,"SELECT RNo, RDate,Length, VIN FROM Reservation where MemID = '$member_ID'"));
 if (mysqli_num_rows($result) > 0) {
 while ($row = mysqli_fetch_assoc($result)){
-	echo "<h2 align = 'center'><br>Reservation Number: ", $row['RNo'], " Reservation Date: ", $row['RDate'], " Length of Rental: ", $row['Length'], " VIN: ", $row['VIN'];
+	echo "<h3 align = 'center'><br><b>Reservation Number: </b>", $row['RNo'], " <br><b>Reservation Date: </b>", $row['RDate'], " <br><b>Length of Rental: </b>", $row['Length'], " <br><b>VIN: </b>", $row['VIN'],"<br><br>";
 
 }
 }
