@@ -46,11 +46,18 @@ if (isset($_POST['Location'])){
     $Location = $_POST["Location"];
    
  echo "<h2 align = 'center'><br>Cars at ", $Location, "<br>";
-$result = (mysqli_query($cxn,"SELECT VIN, Rno FROM (Car LEFT JOIN Reservation On Car.VIN = Reservation.VIN) WHERE Car.Location = '$Location'")); 
+$result = (mysqli_query($cxn,"SELECT Car.VIN, Location, RNo FROM Car LEFT JOIN Reservation ON Car.VIN = Reservation.VIN WHERE Car.Location = '$Location'")); 
+if ($result !== FALSE){
 while ($row = mysqli_fetch_assoc($result)){
-    echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br> Reservation Number: ", $row['Rno'] ;
+    echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br> Reservation Number: ", $row['RNo'] ;
 }
-
+}
+else{
+$result = (mysqli_query($cxn,"SELECT VIN FROM Car WHERE Location = '$Location'"));
+while ($row = mysqli_fetch_assoc($result)){
+    echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br>" ;
+}
+}
 }
 else{
 
