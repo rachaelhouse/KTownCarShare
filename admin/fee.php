@@ -16,7 +16,7 @@ include_once('./includes/header.class.php');
 <table cellspacing="50" align="center">
   <!--<tr><td align="center"><a href='./location'><button class='btn btn-primay'>Make Reservation</button></a></td></tr> 
   <tr><td><br/><br/></td></tr>-->
-  <tr><td align="center"><p><b>Cars Available By Date</b></p></td></tr>
+  <tr><td align="center"><p><b>Generate Monthly Invoice</b></p></td></tr>
   <tr>
     <td align="center">
       <br />

@@ -9,14 +9,14 @@
     <!-- Nav Bar -->  
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right"> 
-        <li class=""><a href="./carsatlocation.php" class="navbar-item" style="background-color: #dcdfe1;">Cars at Location</a></li>
+        <li class=""><a href="./carsatlocation.php" class="navbar-item" style="background-color: #dcdfe1;">Locations</a></li>
         <li class=""><a href="./addcar.php" class="navbar-item" style="background-color: #dcdfe1;">Add Car</a></li>
-        <li class=""><a href="./reservationonDate.php" class="navbar-item" style="background-color: #dcdfe1;">Reservations By Date</a></li>  
+        <li class=""><a href="./reservationonDate.php" class="navbar-item" style="background-color: #dcdfe1;">Reservations</a></li>  
         <li class=""><a href="./fee.php" class="navbar-item" style="background-color: #dcdfe1;">Fee</a></li>
         <li class=""><a href="./feedback.php" class="navbar-item" style="background-color: #dcdfe1;">Feedback</a></li>
-        <li class=""><a href="./carRentalHistory.php" class="navbar-item" style="background-color: #dcdfe1;">Car Rental History</a></li>
+        <li class=""><a href="./carRentalHistory.php" class="navbar-item" style="background-color: #dcdfe1;">Rental History</a></li>
         <li class=""><a href="./damaged.php" class="navbar-item" style="background-color: #dcdfe1;">Damaged Cars</a></li>
-        <li class=""><a href="./highLowRental.php" class="navbar-item" style="background-color: #dcdfe1;">Highest/ Lowest Rentals</a></li>
+        <li class=""><a href="./highLowRental.php" class="navbar-item" style="background-color: #dcdfe1;">High/ Low Rentals</a></li>
         <li class=""><a href="./5000+.php" class="navbar-item" style="background-color: #dcdfe1;">5000+</a></li>
         <li class=""><a href="/KTownCarShare/index.php" class="navbar-item" style="background-color: #dcdfe1;">Not An Admin</a></li>
        
