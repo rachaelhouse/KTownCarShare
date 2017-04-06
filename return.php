@@ -41,6 +41,8 @@ include_once('./includes/header.class.php');
 			$status = $_POST['status'];
 			
 			$rate=mysqli_fetch_assoc(mysqli_query($cxn,"SELECT * FROM Car WHERE VIN='$vin'"))['Fee'];
+
+			if (strtotime($returntime)-strtotime($pickuptime)> 0){
 			
 			$pay=floor((abs(strtotime($returntime)-strtotime($pickuptime))/(60*60))*$rate);
 			$millage=$_POST['millage'];
@@ -48,6 +50,10 @@ include_once('./includes/header.class.php');
 			mysqli_query($cxn,"UPDATE History SET DropOdReading='$millage',Status='$status' WHERE VIN='$vin'");
 			mysqli_query($cxn,"DELETE FROM Reservation WHERE RNo = $reservationnum");
 			echo "<p align='center'> The total payment is $".$pay.". And it will be charged automatically through your credit card.</p>";
+			}
+			else{
+				echo "<p align='center'> The total payment is $0. And it will be charged automatically through your credit card.</p>";
+			}
 			echo "<h3 align='center'>Thank You for Car Sharing with Us</h3>";
 			}
 		}
