@@ -23,6 +23,8 @@ include_once('./includes/header.class.php');
 			if (empty($_POST['millage'])){
 				echo "
 				<Form Action='return.php' method='POST'>
+				Reservation Number:
+                <Input type='text' name='Rnum'>
 				Current Millage:
 				<Input type='text' name='millage'>
 				Status:
