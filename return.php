@@ -56,6 +56,7 @@ include_once('./includes/header.class.php');
 			else{
 				echo "<p align='center'> The total payment is $0. And it will be charged automatically through your credit card.</p>";
 			}
+			mysqli_query($cxn,"DELETE FROM Reservation WHERE RNo = $reservationnum");
 			echo "<h3 align='center'>Thank You for Car Sharing with Us</h3>";
 			}
 		}
