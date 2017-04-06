@@ -46,9 +46,9 @@ if (isset($_POST['Date'])){
     $Date = $_POST["Date"];
    
  echo "<h2 align = 'center'><br>Reservations on ", $Date, "<br>";
-$result = (mysqli_query($cxn,"SELECT VIN, Rno FROM  Reservation WHERE RDate = '$Date'")); 
+$result = (mysqli_query($cxn,"SELECT VIN, MemID, Rno FROM  Reservation WHERE RDate = '$Date'")); 
 while ($row = mysqli_fetch_assoc($result)){
-    echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br> Reservation Number: ", $row['Rno'];
+    echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br> Reservation Number: ", $row['Rno'], "<br> Member ID: ", $row['MemID'];
 }
 
 }
