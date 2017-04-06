@@ -48,7 +48,7 @@ if (!empty($_POST['email'])&&!empty($_POST['password']))
 if (isset($_SESSION['username']))
   {
     
-   echo "<div>Hi, ".$_SESSION['username']." You are logged in. <a href='logout.php'>(Log out)</a> &nbsp; <a href='return.php'>return car</a></div>";
+   echo "<div>Hi, ".$_SESSION['username']." You are logged in. <a href='logout.php'>(Log out)</a> &nbsp;<a href='pickup.php'>pick up car</a></div> <a href='return.php'>return car</a></div>";
   }
   else
   {
