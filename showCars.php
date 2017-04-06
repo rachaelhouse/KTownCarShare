@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_assoc($cars)){
     $resStartDate = strtotime($unavailCar['RDate']);
     $Length = $unavailCar['Length'];
     $resEndDate = strtotime("+$Length days", $resStartDate);
-    if ($unavailCar['VIN'] === $row['VIN'] and strtotime($date) < $resStartDate or strtotime($date) > $resEndDate){
+    if ($unavailCar['VIN'] !== $row['VIN'] or strtotime($date) < $resStartDate or strtotime($date) > $resEndDate){
 echo "<h2><br>VIN: ", $row['VIN'], ",\tMake: ", $row['Make'], ",\tModel: ", $row['Model'], ",\tYear: ", $row['Year'] ,",\tLocation: ", $row['Location'], ",\tFee: ", $row['Fee'], "<br></h2>";
     }
   }
