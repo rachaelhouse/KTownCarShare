@@ -49,7 +49,12 @@ if (isset($_POST['Location'])){
 $result = (mysqli_query($cxn,"SELECT Car.VIN, Location, RNo FROM Car LEFT JOIN Reservation ON Car.VIN = Reservation.VIN WHERE Car.Location = '$Location'")); 
 if ($result !== FALSE){
 while ($row = mysqli_fetch_assoc($result)){
+    if ($row['RNo']== NULL){
+        echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br> Reservation Number: Not Reserved";
+    }
+    else{
     echo "<h2 align = 'center'><br>Car VIN: ", $row['VIN'], "<br> Reservation Number: ", $row['RNo'] ;
+    }
 }
 }
 else{
