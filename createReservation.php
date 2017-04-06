@@ -63,8 +63,8 @@ if (isset($_POST['VIN'])){
 	$Fee = rand(10, 100);
 
 if(mysqli_query($cxn, "INSERT INTO Reservation VALUES('$Rno', '$Date', '$Length', '$MemberID', '$VIN', '$Fee')")){
-    echo "<h1 align='center'> You successfully made a Reservation. Redirecting to Home page in 5 seconds ";
-	header('Refresh: 5; URL=index.php');
+    echo "<h1 align='center'> You successfully made a Reservation. Reservation Number (for pickup/ Drop off )", $Rno;
+
 }
 else{
 	echo "<p>Please fill in all the information!</p>";
