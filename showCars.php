@@ -39,12 +39,13 @@ $cars = (mysqli_query($cxn,"SELECT * FROM Car "));
 if ($cars!== FALSE) {
 while ($row = mysqli_fetch_assoc($cars)){
   $currentVIN = $row['VIN'];
-  $unCars = (mysqli_query($cxn,"SELECT VIN,RDate,Length FROM Reservation Where VIN = '$currentVIN"));
+  $unCars = (mysqli_query($cxn,"SELECT VIN,RDate,Length FROM Reservation Where VIN = $currentVIN"));
   if ($unCars !== FALSE){
+    $unavailCar = mysqli_fetch_assoc($unCars);
     $resStartDate = strtotime($unavailCar['RDate']);
     $Length = $unavailCar['Length'];
     $resEndDate = strtotime("+$Length days", $resStartDate);
-    if ($unavailCar['VIN'] === $row['VIN'] and (strtotime($date) < $resStartDate or strtotime($date) > $resEndDate)){
+    if (strtotime($date) < $resStartDate or strtotime($date) > $resEndDate){
 echo "<h2><br>VIN: ", $row['VIN'], ",\tMake: ", $row['Make'], ",\tModel: ", $row['Model'], ",\tYear: ", $row['Year'] ,",\tLocation: ", $row['Location'], ",\tFee: ", $row['Fee'], "<br></h2>";
     }
   
